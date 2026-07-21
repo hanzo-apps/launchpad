@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nova is launching soon — join the waitlist for early access." />
+    <title>Nova — Launching soon</title>
+    <style>
+      /* Dark base so there is no white flash before @hanzo/gui paints the hero. */
+      html, body, #root { height: 100%; }
+      body {
+        margin: 0;
+        background: #0a0b12;
+        color-scheme: dark;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Non-jittering countdown / counter numerals (used via className). */
+      .wl-mono { font-variant-numeric: tabular-nums; font-feature-settings: "tnum"; }
+
+      /* Ambient hero glow — three blurred discs drifting on their own paths. */
+      .wl-aurora { filter: blur(72px); will-change: transform; }
+      .wl-aurora-a { animation: wl-drift-a 17s ease-in-out infinite alternate; }
+      .wl-aurora-b { animation: wl-drift-b 21s ease-in-out infinite alternate; }
+      .wl-aurora-c { animation: wl-drift-c 19s ease-in-out infinite alternate; }
+      @keyframes wl-drift-a { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(60px,40px,0) scale(1.12); } }
+      @keyframes wl-drift-b { from { transform: translate3d(0,0,0) scale(1.05); } to { transform: translate3d(-50px,30px,0) scale(0.92); } }
+      @keyframes wl-drift-c { from { transform: translate3d(0,0,0) scale(0.95); } to { transform: translate3d(40px,-50px,0) scale(1.15); } }
+
+      /* Hero entrance. */
+      .wl-rise { animation: wl-rise 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+      @keyframes wl-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+      /* Eyebrow pill breathe. */
+      .wl-breathe { animation: wl-breathe 3.4s ease-in-out infinite; }
+      @keyframes wl-breathe { 0%, 100% { opacity: 0.82; } 50% { opacity: 1; } }
+
+      /* CTA glow pulse. */
+      .wl-cta { animation: wl-glow 2.8s ease-in-out infinite; }
+      @keyframes wl-glow {
+        0%, 100% { box-shadow: 0 0 0 rgba(109, 94, 252, 0); }
+        50% { box-shadow: 0 0 28px rgba(109, 94, 252, 0.55); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .wl-aurora-a, .wl-aurora-b, .wl-aurora-c, .wl-rise, .wl-breathe, .wl-cta { animation: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
