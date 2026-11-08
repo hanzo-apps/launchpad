@@ -1,5 +1,14 @@
 # Launchpad Waitlist
 
+<!-- hanzo-badges -->
+<p align="left">
+  <a href="https://platform.hanzo.ai/new?repo=https%3A%2F%2Fgithub.com%2Fhanzo-apps%2Flaunchpad&template=launchpad"><img src="https://gallery.hanzo.ai/deploy.svg" alt="Deploy to Hanzo" height="32" /></a>
+  <a href="https://hanzo.ai/chat?template=launchpad"><img src="https://gallery.hanzo.ai/badges/edit-in-hanzo.svg" alt="Edit in Hanzo.ai" height="32" /></a>
+  <a href="https://gallery.hanzo.ai/templates/launchpad"><img src="https://gallery.hanzo.ai/badges/live-preview.svg" alt="Live Preview" height="32" /></a>
+  <a href="https://gallery.hanzo.ai/llms/launchpad/LLM.md"><img src="https://gallery.hanzo.ai/badges/llm-md.svg" alt="LLM.md Playbook" height="32" /></a>
+</p>
+<!-- /hanzo-badges -->
+
 A dark, motion-rich **launch landing page** you fork on
 [hanzo.app](https://hanzo.app) and deploy live on Hanzo Cloud. Drop your email,
 watch the countdown tick, and see the signup counter climb — then sign in to the
